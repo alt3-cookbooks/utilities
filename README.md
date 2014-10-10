@@ -4,4 +4,7 @@
 
 Various convenience recipes.
 
-Very much a work in progress
+#TODO
+
+- make utilities::login_chdir idempotent
+
