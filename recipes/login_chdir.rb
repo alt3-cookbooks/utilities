@@ -3,7 +3,7 @@
 # Recipe:: login_chdir
 #
 
-ruby_block "Set login directory" do
+ruby_block "chdir after login" do
   block do
     File.open("/home/#{node.utilities[:login_chdir][:user]}/#{node.utilities[:login_chdir][:startup_file]}", 'a') do |file|
       file.puts "\ncd #{node.utilities[:login_chdir][:directory]}"
