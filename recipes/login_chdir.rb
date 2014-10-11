@@ -5,7 +5,7 @@
 
 ruby_block "Set login directory" do
   block do
-    File.open(Chef::Util::FileEdit.new("/home/#{node.utilities[:login_chdir][:user]}/#{node.utilities[:login_chdir][:startup_file]}"), 'a') do |file|
+    File.open("/home/#{node.utilities[:login_chdir][:user]}/#{node.utilities[:login_chdir][:startup_file]}", 'a') do |file|
       file.puts "\ncd #{node.utilities[:login_chdir][:directory]}"
     end
   end
